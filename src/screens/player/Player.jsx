@@ -34,7 +34,6 @@ const Player = () => {
       <div className="left-player-body">
         <AudioPlayer
           currentTrack={currentTrack}
-          isPlaying={true}
           total={tracks}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}

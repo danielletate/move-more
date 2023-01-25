@@ -1,5 +1,6 @@
 import React from 'react';
 import './progressCircle.css';
+
 const Circle = ({ color, percentage, size, strokeWidth }) => {
   const radius = size / 2 - 10;
   const circ = 2 * Math.PI * radius - 20;
@@ -20,7 +21,13 @@ const Circle = ({ color, percentage, size, strokeWidth }) => {
   );
 };
 
-const ProgressCircle = ({ percentage, isPlaying, image, size, color }) => {
+export default function ProgressCircle({
+  percentage,
+  isPlaying,
+  size,
+  color,
+  image,
+}) {
   return (
     <div className="progress-circle flex">
       <svg width={size} height={size}>
@@ -62,6 +69,4 @@ const ProgressCircle = ({ percentage, isPlaying, image, size, color }) => {
       </svg>
     </div>
   );
-};
-
-export default ProgressCircle;
+}
